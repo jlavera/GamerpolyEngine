@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamerpolyServer", "GamerpolyServer\GamerpolyServer.csproj", "{E38D9440-FE30-45DB-B167-0B1AC3BC1B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerConsole", "ServerConsole\ServerConsole.csproj", "{6BCB9645-6724-4A1F-A0FF-1045542FB4D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamerpolyUtils", "..\GamerpolyUtils\GamerpolyUtils.csproj", "{E6897DE9-A709-4EB7-AAAD-E5BFBA2E4F33}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E38D9440-FE30-45DB-B167-0B1AC3BC1B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E38D9440-FE30-45DB-B167-0B1AC3BC1B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E38D9440-FE30-45DB-B167-0B1AC3BC1B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E38D9440-FE30-45DB-B167-0B1AC3BC1B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BCB9645-6724-4A1F-A0FF-1045542FB4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCB9645-6724-4A1F-A0FF-1045542FB4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCB9645-6724-4A1F-A0FF-1045542FB4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCB9645-6724-4A1F-A0FF-1045542FB4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6897DE9-A709-4EB7-AAAD-E5BFBA2E4F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6897DE9-A709-4EB7-AAAD-E5BFBA2E4F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6897DE9-A709-4EB7-AAAD-E5BFBA2E4F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6897DE9-A709-4EB7-AAAD-E5BFBA2E4F33}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
