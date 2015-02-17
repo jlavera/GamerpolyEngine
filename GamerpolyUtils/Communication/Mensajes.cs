@@ -19,6 +19,7 @@ namespace GamerpolyUtils.Communication {
     public class InicialServerResp : Communication<InicialServerResp> {
         public bool Otorga;
         public int Puerto;
+        public bool Encontrado;
         public int IdPartida;
         public InicialServerResp() { }
         public InicialServerResp(int? _id) : base(_id) { }

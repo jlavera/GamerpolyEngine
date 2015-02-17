@@ -17,9 +17,6 @@ namespace GamerpolyServer {
         private List<TcpClient> clients;
         private Dictionary<int, GameSystem> currentGames;
         private int currentId;
-        private int currentPort; //--TODO ver como obtener un puerto libre dentro de un rango
-
-        private bool escuchar;
 
         public Server() {
             clients = new List<TcpClient>();
@@ -30,9 +27,7 @@ namespace GamerpolyServer {
         }
 
         public Server Start() {
-            escuchar = true;
             listener.Start();
-
             return this;
         }
 
@@ -53,6 +48,7 @@ namespace GamerpolyServer {
                             new Jugador(obj.IdJugador, client),
                             list));
 
+                    //--Responder resultado al cliente con información de la nueva partida
                     client.Snd(
                         new InicialServerResp() {
                             IdPartida = currentId,
@@ -60,17 +56,30 @@ namespace GamerpolyServer {
                             Puerto = ((IPEndPoint)list.LocalEndpoint).Port
                         });
                     Console.WriteLine("Create {0}", currentId);
-                } else {
-                    //--Buscar juego existente
-                    var gs = currentGames[obj.IdPartida];
-                    client.Snd(
-                        new InicialServerResp() {
-                            Puerto = gs.Port
-                        });
-                    Console.WriteLine("Join a {0}", gs.Port);
-                }
 
-                currentId++;
+                    currentId++;
+                } else {
+                    GameSystem gs;
+
+                    try {
+                        //--Buscar juego existente
+                        gs = currentGames[obj.IdPartida];
+
+                        //--Responder con puerto de la partida solicitada
+                        client.Snd(
+                            new InicialServerResp() {
+                                Encontrado = true,
+                                Puerto = gs.Port
+                            });
+                        Console.WriteLine("Join a {0}", gs.Port);
+
+                    } catch (KeyNotFoundException) {
+                        client.Snd(
+                            new InicialServerResp() {
+                                Encontrado = false
+                            });
+                    }
+                }
             }
         }
     }

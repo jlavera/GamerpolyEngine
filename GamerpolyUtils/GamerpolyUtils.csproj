@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Communication\Mensajes.cs" />
     <Compile Include="Communication.cs" />
+    <Compile Include="Security\SimpleAES.cs" />
     <Compile Include="SockExt.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -72,5 +72,12 @@ namespace GamerpolyServer.Domain {
             Console.WriteLine("Thread: Close Lobby");
         }
 
+        public void Multiplexar<T>() {
+            Listener.BeginAcceptTcpClient(kcyo<T>, Listener);
+        }
+
+        public void kcyo<T>(IAsyncResult ar) {
+
+        }
     }
 }

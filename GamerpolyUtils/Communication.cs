@@ -11,7 +11,7 @@ namespace GamerpolyUtils {
     [Serializable]
     public abstract class Communication<T> {
 
-        public int Id{get;set;}
+        public int Id { get; set; }
 
         public Communication() { }
         public Communication(int? _id) {
