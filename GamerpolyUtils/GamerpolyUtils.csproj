@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Communication\Ejemplo.cs" />
     <Compile Include="Communication\Mensajes.cs" />
     <Compile Include="Communication.cs" />
     <Compile Include="Security\SimpleAES.cs" />

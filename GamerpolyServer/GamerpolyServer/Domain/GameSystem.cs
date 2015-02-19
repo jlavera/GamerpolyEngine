@@ -46,12 +46,15 @@ namespace GamerpolyServer.Domain {
 
             Console.WriteLine("Thread: Start game");
 
-            ////--Fase de juego
-            //while (true) {
-            //    var client = jugadores[0];
-            //    //client.Snd(tu turno);
-            //    //client.Rcv(jugada);
-            //}
+            //--Fase de juego
+            while (true) {
+
+                var client = jugadores[0];
+
+
+                //client.Snd(tu turno);
+                //client.Rcv(jugada);
+            }
             
             Console.WriteLine("Thread: End game");
         }
